@@ -25,7 +25,7 @@ _If you would like to contact me for any further information or update requests,
 
 ## Technologies Used
 
-_HTML/CSS, Bootstrap, jQuery_
+_HTML/CSS, Bootstrap, Javascript jQuery_
 
 ### License
 

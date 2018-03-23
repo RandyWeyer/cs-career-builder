@@ -20,19 +20,19 @@ $(document).ready(function() {
         var unfinishedQuiz = false;
 
 
-        if (computerOS==apple) {
-          preferJavascript+=2;
+        if (computerOS=="apple") {
+          preferJavascript+=1;
           preferPhp+=1;
           preferRuby+=2;
           preferPython-=2;
           preferCSharp-=3;
-        } else if (computerOS==microsoft) {
+        } else if (computerOS=="microsoft") {
           preferJavascript+=3;
           preferPhp-=2;
           preferRuby-=3;
           preferPython-=2;
           preferCSharp+=3;
-        } else if (computerOS==linux) {
+        } else if (computerOS=="linux") {
           preferJavascript+=1;
           preferPhp+=3;
           preferRuby+=3;
@@ -42,13 +42,13 @@ $(document).ready(function() {
           unfinishedQuiz = true;
         }
 
-        if (frontBackEnd==frontend) {
+        if (frontBackEnd=="frontend") {
           preferJavascript+=3;
           preferPhp-=3;
           preferRuby-=1;
           preferPython-=1;
           preferCSharp+=1;
-        } else if (frontBackEnd==backend) {
+        } else if (frontBackEnd=="backend") {
           preferJavascript-=3;
           preferPhp+=1;
           preferRuby+=3;
@@ -58,19 +58,19 @@ $(document).ready(function() {
           unfinishedQuiz = true;
         }
 
-        if (webApp==web) {
+        if (webApp=="web") {
           preferJavascript+=3;
           preferPhp+=2;
           preferRuby+=3;
           preferPython-=2;
-          preferCSharp-=4;
-        } else if (webApp==app) {
+          preferCSharp-=3;
+        } else if (webApp=="app") {
           preferJavascript-=1;
           preferPhp-=3;
           preferRuby-=3;
           preferPython+=2;
           preferCSharp+=3;
-        } else if (webApp==both) {
+        } else if (webApp=="both") {
           preferJavascript+=3;
           preferPhp-=3;
           preferRuby+=3;
@@ -80,13 +80,13 @@ $(document).ready(function() {
           unfinishedQuiz = true;
         }
 
-        if (mobileDesktop==mobile) {
+        if (mobileDesktop=="mobile") {
           preferJavascript+=3;
-          preferPhp-=3;
+          preferPhp-=2;
           preferRuby-=2;
           preferPython-=1;
           preferCSharp+=1;
-        } else if (mobileDesktop==desktop) {
+        } else if (mobileDesktop=="desktop") {
           preferJavascript+=3;
           preferPhp+=1;
           preferRuby+=3;
@@ -96,13 +96,13 @@ $(document).ready(function() {
           unfinishedQuiz = true;
         }
 
-        if (preferDatabase==database) {
-          preferJavascript+=1;
-          preferPhp+=1;
+        if (preferDatabase=="database") {
+          preferJavascript-=1;
+          preferPhp-=1;
           preferRuby+=3;
           preferPython-=1;
-          preferCSharp+=1;
-        } else if (preferDatabase==noDatabase) {
+          preferCSharp-=1;
+        } else if (preferDatabase=="noDatabase") {
           preferJavascript+=3;
           preferPhp-=3;
           preferRuby-=3;
@@ -115,27 +115,47 @@ $(document).ready(function() {
         if (unfinishedQuiz==true) {
           alert("Please finish all fields before submitting.")
         }
+
+        // Ideally I would sort these by value
+
+        if (preferJavascript >= preferJavascript && preferJavascript >= preferPhp && preferJavascript >= preferRuby && preferJavascript >= preferPython && preferJavascript >= preferCSharp) {
+          javascriptInfo();
+        }
+        if (preferPhp >= preferJavascript && preferPhp >= preferRuby && preferPhp >= preferPython && preferPhp >= preferCSharp) {
+          phpInfo();
+        }
+        if (preferRuby >= preferJavascript && preferRuby >= preferPhp && preferRuby >= preferRuby && preferRuby >= preferPython && preferRuby >= preferCSharp) {
+          rubyInfo();
+        }
+        if (preferPython >= preferJavascript && preferPython >= preferPhp && preferPython >= preferRuby && preferPython >= preferPython && preferPython >= preferCSharp) {
+          pythonInfo();
+        }
+        if (preferCSharp >= preferJavascript && preferCSharp >= preferPhp && preferCSharp >= preferRuby && preferCSharp >= preferPython && preferCSharp >= preferCSharp) {
+          cSharpInfo();
+        }
+
   });
 
-  // Popover Bootstrap.js
-  $('[data-toggle="popover"]').popover();
-
-  // Functions for append each popup into the info box so students can read what a language is commonly used for.
+  // Functions to append a link so students can read what a language is commonly used for.
 
   function javascriptInfo() {
-    $("#javascript-info").append("<a href='#' title='Javascript' data-toggle='popover' data-trigger='focus' data-content='Javascript INFO'>Javascript</a>"
+    $("#results").text("Javascript"
   )};
 
   function phpInfo() {
-    $("#php-info").append("<a href='#' title='PHP' data-toggle='popover' data-trigger='focus' data-content='PHP INFO'>PHP</a>"
+    $("#results").text("PHP"
   )};
 
   function rubyInfo() {
-    $("#ruby-info").append("<a href='#' title='Ruby' data-toggle='popover' data-trigger='focus' data-content='Ruby INFO'>Ruby</a>"
+    $("#results").text("Ruby"
   )};
 
   function pythonInfo() {
-    $("#python-info").append("<a href='#' title='Python' data-toggle='popover' data-trigger='focus' data-content='Python INFO'>Python</a>"
+    $("#results").text("Python"
+  )};
+
+  function cSharpInfo() {
+    $("#results").text("C#"
   )};
 
 
