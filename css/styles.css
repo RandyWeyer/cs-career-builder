@@ -1,10 +1,26 @@
 p {
   font-size: 15px;
 }
+.page-title {
+  text-align: center;
+  margin: 40px auto 50px auto;
+}
+.quiz-title {
+  text-align: center;
+  margin: 50px auto 30px auto;
+}
 .languages-img {
   max-width: 500px;
   float: right;
   margin-left: 50px;
+}
+.center-item {
+  margin: 0 auto 0 auto;
+}
+.btn-primary {
+  font-size: 15px;
+  font-weight: bold;
+  width: 20%
 }
 .suggestions {
   /* popup boxes with language details */

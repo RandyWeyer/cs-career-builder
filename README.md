@@ -17,7 +17,7 @@ _A website that helps students decide what type of language they would prefer or
 
 ## Known Bugs
 
-_Due to the use of bootstrap columns the website will look distorted on small resolutions. This is because bootstrap collapses all columns to take the entire width of the parent element on small resolutions. I might end up using a table based on the current layout._
+_No known bugs_
 
 ## Support and contact details
 

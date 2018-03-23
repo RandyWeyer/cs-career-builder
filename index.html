@@ -13,7 +13,7 @@
   <div class="container">
 
     <div class="row">  <!-- Beginning of top row -->
-      <h1>Computer Science Career Builder</h1>
+      <h1 class="page-title">Computer Science Career Builder</h1>
       <img class="languages-img img-responsive" src="img/languages.jpg">
       <p>One of the most frequently asked questions by people interested in learning programming is what language should they start off with. The short answer is that the most important thing you can learn in Computer Science is logic statements and how programming languages work in general. That still leaves open the question of which language is better to start with first.</p>
 
@@ -23,27 +23,95 @@
 
     </div>  <!-- End of top row -->
 
-    <h3 class="center-block">Start Building</h3>
+    <h3 class="quiz-title">Start Building</h3>
 
     <form id="career-builder">
 
-    <div class="row">
+      <div class="row">
 
-      <p class="col-md-6">One thing that affect your language preference the most is whether you want to deal with slick and easy to use design, or if you prefer to concentrate on logic of a program more. In the end you will likely need to use a little of both, but it's good to start with where your mind naturally starts on a problem.</p>
+        <p class="col-md-8">Depending on what type of OS your computer has, you might have some extra hurdles to cross. There are several languages made specifically for one OS or are supported much better on one OS over another. Whether it's for you personally or for your target market, the OS in use is a huge factor in considering which what language you use.</p>
 
-      <div class="col-md-2">
-        <label for="front-back-end">Design or Logic</label>
-        <div class="radio">
-          <label><input type="radio" name="front-back-end">Design</label>
+        <div class="col-md-4">
+          <label for="computer-os">Preferred OS</label>
+          <div class="radio">
+            <label><input type="radio" name="computer-os">Apple/Mac</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="computer-os">Microsoft/Windows</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="computer-os">Linux-based</label>
+          </div>
         </div>
-        <div class="radio">
-          <label><input type="radio" name="front-back-end">Logic</label>
+
+        <hr class="col-md-12">
+
+        <p class="col-md-8">One thing that will affect your language preference greatly is whether you want to deal with slick and easy to use design, or if you prefer to concentrate on the logic of a program more. In the end you will likely need to use a little of both, but it's good to start with how your mind naturally visualizes a problem.</p>
+
+        <div class="col-md-4">
+          <label for="front-back-end">Design or Logic</label>
+          <div class="radio">
+            <label><input type="radio" name="front-back-end" value="design">Design</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="front-back-end" value="logic">Logic</label>
+          </div>
         </div>
+
+        <hr class="col-md-12">
+
+        <p class="col-md-8">Another thing that can change which path is best suited for you is whether you would like to make something online or have it be more of a self-contained application. This question may also deal with what <em>part</em> of a project that you would like to work on.</p>
+
+        <div class="col-md-4">
+          <label for="web-app">Web or App</label>
+          <div class="radio">
+            <label><input type="radio" name="web-app">Website</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="web-app">Application</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="web-app">A little of both</label>
+          </div>
+        </div>
+
+        <hr class="col-md-12">
+
+        <p class="col-md-8">One of the quickest growing markets currently is the mobile platform. Many people get into programming so they can realize a mobile app idea that they have. A mobile developer has to be conscious of differing screen sizes and huge variety of devices. Does the mobile market interet you?</p>
+
+        <div class="col-md-4">
+          <label for="mobile-desktop">Mobile or Desktop</label>
+          <div class="radio">
+            <label><input type="radio" name="mobile-desktop">Mobile</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="mobile-desktop">Desktop</label>
+          </div>
+        </div>
+
+        <hr class="col-md-12">
+
+        <p class="col-md-8">Would you like to work dynamically with a database? </p>
+
+        <div class="col-md-4">
+          <label for="web-app">Database</label>
+          <div class="radio">
+            <label><input type="radio" name="web-app">Database</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="front-back-end">Non-database</label>
+          </div>
+        </div>
+
+
+
+        <button class="btn btn-primary center-block" type="submit" id="submit-quiz">Submit</button>
+
+      </form>
+
+      <div class="suggestions">
       </div>
 
-      <div class="col-md-4 suggestions">
-        <a href='#' title='Javascript' data-toggle='popover' data-trigger='focus' data-content='Javascript INFO'>Javascript</a>
-      </div>
 
     </div>  <!-- End of row -->
   </div>  <!-- End of container -->
