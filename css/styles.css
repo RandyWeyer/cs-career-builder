@@ -1,0 +1,11 @@
+p {
+  font-size: 15px;
+}
+.languages-img {
+  max-width: 500px;
+  float: right;
+  margin-left: 50px;
+}
+.suggestions {
+  /* popup boxes with language details */
+}
