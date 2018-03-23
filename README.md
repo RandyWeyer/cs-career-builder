@@ -6,7 +6,7 @@
 
 ## Description
 
-_A website that displays my portfolio and projects that I've worked on._
+_A website that helps students decide what type of language they would prefer or be good at._
 
 ## Setup/Installation Requirements
 
