@@ -117,7 +117,7 @@ $(document).ready(function() {
         }
 
         // Ideally I would sort these by value
-
+        if (unfinishedQuiz==false) {
         if (preferJavascript >= preferJavascript && preferJavascript >= preferPhp && preferJavascript >= preferRuby && preferJavascript >= preferPython && preferJavascript >= preferCSharp) {
           javascriptInfo();
         }
@@ -133,7 +133,7 @@ $(document).ready(function() {
         if (preferCSharp >= preferJavascript && preferCSharp >= preferPhp && preferCSharp >= preferRuby && preferCSharp >= preferPython && preferCSharp >= preferCSharp) {
           cSharpInfo();
         }
-
+      }
   });
 
   // Functions to append a link so students can read what a language is commonly used for.
